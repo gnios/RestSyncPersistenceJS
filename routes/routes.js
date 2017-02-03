@@ -15,18 +15,18 @@ function cliente(id, nome, empresa) {
 }
 
 function updatesMock() {
-    this.now = new Date("October 13, 2014 11:13:00");
+    this.now = Date.now();
     this.updates = [];
-    for (var index = 1; index < 100; index++) {
+    for (var index = 1; index < 5000; index++) {
         this.updates.push(new produto(index, "produto" + index, index * 100));
     }
     return this;
 }
 
 function mockClientes() {
-    this.now = new Date("October 13, 2014 11:13:00");
+    this.now = Date.now();
     this.updates = [];
-    for (var index = 1; index < 100; index++) {
+    for (var index = 1; index < 5000; index++) {
         this.updates.push(new cliente(index, "nome" + index, "empresa" + index));
     }
     return this;
